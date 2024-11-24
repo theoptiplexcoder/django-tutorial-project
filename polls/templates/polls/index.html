@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+{%if questions_list%}
+<ul>
+    {%for q in questions_list%}
+    <li><a href="{% url 'polls:detail' q.id %}">{{q.question}}</a></li>
+    {%endfor%}
+</ul>
+{%else%}
+<p>No questions</p>
+{%endif%}
+</html>
